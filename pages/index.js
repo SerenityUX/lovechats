@@ -70,8 +70,17 @@ export default function Home() {
         height: "100vh",
         transition: "all 0.3s ease-in-out"
       }}>
-        <Sidebar />
-        <div style={{width: "100%", color: "#67003E", height: "100%", display: "flex", justifyContent: "center", alignItems: "center"}}>
+        <div style={{ display: window.innerWidth < 768 ? "none" : "block" }}>
+          <Sidebar />
+        </div>
+        <div style={{
+          width: "100%", 
+          color: "#67003E", 
+          height: "100%", 
+          display: "flex", 
+          justifyContent: "center", 
+          alignItems: "center"
+        }}>
           <div style={{
             display: 'flex', 
             borderRadius: 16, 
